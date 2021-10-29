@@ -13,12 +13,12 @@ Browse sports categories to view scoring updates for domestic and international 
 
 ### App Evaluation
 [Evaluation of your app across the following attributes]
-- **Category:** Sports
-- **Mobile:** Android app, uses --
-- **Story:** 
-- **Market:** for adults and sport lover
-- **Habit:** Daily use for sprot fans 
-- **Scope:** Everyone, 
+- **Category:** Sports / Social
+- **Mobile:** [What sets it apart from a website / view-only?] easier to access, feed per game with reactions, location, real-time updates
+- **Story:** Allows users to view sports updates in one location rather than scouring the Internet for different sources per sport. Connect with fellow sports fans.
+- **Market:** Anyone that enjoys sports and [some sort of social aspect?]
+- **Habit:**  Users can check back as often as they'd like. [real-time/pull to refresh?]
+- **Scope:** Initial features are [?] however app can be expanded to include [?]
 
 ## Product Spec
 
@@ -26,39 +26,60 @@ Browse sports categories to view scoring updates for domestic and international 
 
 **Required Must-have Stories**
 
-* [fill in your required user stories here]
-* ...
+* User must create an account in order to get into the app
+* User can log in, if they already have an account
+* User should be able to logout
+* User can select their favourite sports from the list of sports
+* User can select different sports to view the game scores
+* User can change pages, from stream, to profile, to Details
 
 **Optional Nice-to-have Stories**
 
-* [fill in your required user stories here]
-* ...
+* User should click on a link to watch the game on the game's website
+* User should be able update their profile
 
 ### 2. Screen Archetypes
 
-* [list first screen here]
-   * [list associated required story here]
-   * ...
-* [list second screen here]
-   * [list associated required story here]
-   * ...
+* Login
+   * User can log in, if they already have an account
+   * User should click on "Sign Up" button to create an account
+
+* Register
+   * User must create an account in order to get into the app
+   
+* Profile
+   * User should be able update their profile information
+   
+* Stream
+   * User can select their favourite sports from the list of sports
+
+* Stream Page 2
+    * User can post thier reaction of the game to the twitter.
+
+* Details
+   * User can select different sports to view the game scores
+   * User should click on a link to watch the game on the game's website
 
 ### 3. Navigation
 
 **Tab Navigation** (Tab to Screen)
 
-* [fill out your first tab]
-* [fill out your second tab]
-* [fill out your third tab]
+* Stream
+* Details
+* Profile
 
 **Flow Navigation** (Screen to Screen)
 
-* [list first screen here]
-   * [list screen navigation here]
-   * ...
-* [list second screen here]
-   * [list screen navigation here]
-   * ...
+* Login
+  * Stream
+* Register
+  * Stream 
+* Profile
+  * Details Page 2
+* Stream
+  * Detail
+* Details
+  * Stream
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
