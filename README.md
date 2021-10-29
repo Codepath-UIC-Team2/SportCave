@@ -1,5 +1,7 @@
+Original App Design Project - README Template
+===
 
-# SPORTS CAVE
+# SPORTCAVE
 
 ## Table of Contents
 1. [Overview](#Overview)
@@ -9,16 +11,16 @@
 
 ## Overview
 ### Description
-Browse sports categories to view scoring updates for domestic and international games.
+Browse sports categories to view scoring updates for domestic and international games. Connect with other sports fans.
 
 ### App Evaluation
 [Evaluation of your app across the following attributes]
 - **Category:** Sports / Social
-- **Mobile:** [What sets it apart from a website / view-only?] easier to access, feed per game with reactions, location, real-time updates
-- **Story:** Allows users to view sports updates in one location rather than scouring the Internet for different sources per sport. Connect with fellow sports fans.
-- **Market:** Anyone that enjoys sports and [some sort of social aspect?]
-- **Habit:**  Users can check back as often as they'd like. [real-time/pull to refresh?]
-- **Scope:** Initial features are [?] however app can be expanded to include [?]
+- **Mobile:** Easier to check for updates, pull to refresh for real-time data, use camera to post photos to reactions feed and update profile photo.
+- **Story:** Allows users to view scoring updates and access livestream links for different sports in one location rather than scouring the Internet every time. Connect with fellow sports fans by sharing reactions.
+- **Market:** Any sports fan would enjoy this app.
+- **Habit:**  Users can check back as often as they'd like and pull to refresh for updates.
+- **Scope:** Initial features are to view scoring updates and to share reactions with other fans. App can be expanded to include livestreaming links.
 
 ## Product Spec
 
@@ -27,11 +29,11 @@ Browse sports categories to view scoring updates for domestic and international 
 **Required Must-have Stories**
 
 * User must create an account in order to get into the app
-* User can log in, if they already have an account
+* User can log in if they already have an account
 * User should be able to logout
 * User can select their favourite sports from the list of sports
 * User can select different sports to view the game scores
-* User can change pages, from stream, to profile, to Details
+* User can change pages, from Stream, to Profile, to Details
 
 **Optional Nice-to-have Stories**
 
@@ -41,20 +43,20 @@ Browse sports categories to view scoring updates for domestic and international 
 ### 2. Screen Archetypes
 
 * Login
-   * User can log in, if they already have an account
+   * User can log in if they already have an account
    * User should click on "Sign Up" button to create an account
 
 * Register
    * User must create an account in order to get into the app
    
 * Profile
-   * User should be able update their profile information
+   * User should be able update their profile information and logout
    
 * Stream
    * User can select their favourite sports from the list of sports
 
 * Stream Page 2
-    * User can post thier reaction of the game to the twitter.
+    * User can post their reaction of the game
 
 * Details
    * User can select different sports to view the game scores
