@@ -96,6 +96,9 @@ URL: https://www.figma.com/file/9bkalDyIyTSFFvTYLGldzO/SportCave?node-id=0%3A1
 
 <img src="wireframes.gif" width=400>
 URL : https://imgur.com/a/WWjdWS2
+
+
+
 ## Schema 
 [This section will be completed in Unit 9]
 ### Models
