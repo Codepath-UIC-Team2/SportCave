@@ -85,12 +85,17 @@ Browse sports categories to view scoring updates for domestic and international 
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+<img src="Codepath_screenshot2.PNG" width=600>
+Image URL : https://imgur.com/a/mM8O8yB
+
 
 ### [BONUS] Digital Wireframes & Mockups
+URL: https://www.figma.com/file/9bkalDyIyTSFFvTYLGldzO/SportCave?node-id=0%3A1
 
 ### [BONUS] Interactive Prototype
 
+<img src="wireframes.gif" width=400>
+URL : https://imgur.com/a/WWjdWS2
 ## Schema 
 [This section will be completed in Unit 9]
 ### Models
