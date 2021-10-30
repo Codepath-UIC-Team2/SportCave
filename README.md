@@ -105,7 +105,7 @@ URL : https://imgur.com/a/WWjdWS2
 
    | Property      | Type     | Description |
    | ------------- | -------- | ------------|
-   | userId        | Number   | unique id for the user (default field) |
+   | userId        | String   | unique id for the user (default field) |
    | username      | String   | user account handle |
    | password      | String   | user account password |
    | email         | String   | user account email |
