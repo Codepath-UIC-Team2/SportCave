@@ -100,9 +100,19 @@ URL : https://imgur.com/a/WWjdWS2
 
 
 ## Schema 
-[This section will be completed in Unit 9]
 ### Models
-[Add table of models]
+#### User
+
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | userId        | Number   | unique id for the user (default field) |
+   | username      | String   | user account handle |
+   | password      | String   | user account password |
+   | email         | String   | user account email |
+   | profileName   | String   | user profile name |
+   | profileImage  | File     | user profile image |
+   | favSports     | Array    | list of user-favorited sports |
+
 ### Networking
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
