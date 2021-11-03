@@ -112,6 +112,32 @@ URL : https://imgur.com/a/WWjdWS2
    | profileName   | String   | user profile name |
    | profileImage  | File     | user profile image |
    | favSports     | Array    | list of user-favorited sports |
+   
+#### Sport
+
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | sportId     | String   | unique id for the sport (default field) |
+   | sportName   | String   | name of sport |
+   | sportImage  | File     | representative image of sport |
+   
+#### Comment
+
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | commentId     | String   | unique id for the comment (default field) |
+   | commentUser   | String   | username of user posting comment |
+   | commentText   | String   | comment text |
+   | createdAt     | DateTime | date/time when post is created |
+   | commentImage  | File     | (optional) attach image file with comment |
+
+#### Game
+
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | gameId        | String   | unique id for the game (default field) |
+   | game info??   |          |                                        |
+   | updatedAt     | DateTime | date/time when scores are last updated |
 
 ### Networking
 - [Add list of network requests by screen ]
