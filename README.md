@@ -140,6 +140,15 @@ URL : https://imgur.com/a/WWjdWS2
    | updatedAt     | DateTime | date/time when scores are last updated |
 
 ### Networking
-- [Add list of network requests by screen ]
+* Stream Page
+  * (Read/GET): Query all the List of Sport names
+* Detail Page
+  * (Read/GET): Get all the data of that perticular sport where game detail is assigned to gameId
+* Social Page
+  * (Create/POST): Create a comment and post it to the twitter.
+* Profile Page
+  * (Read/GET) Query logged in user object
+  * (Update/PUT) Update user profile attributes
+ 
 - [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
