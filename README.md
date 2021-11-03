@@ -136,7 +136,7 @@ URL : https://imgur.com/a/WWjdWS2
    | Property      | Type     | Description |
    | ------------- | -------- | ------------|
    | gameId        | String   | unique id for the game (default field) |
-   | game info??   |          |                                        |
+   | game info     | String   | location, time, description of game    |
    | updatedAt     | DateTime | date/time when scores are last updated |
 
 ### Networking
