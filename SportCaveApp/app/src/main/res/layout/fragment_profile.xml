@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".fragments.ProfileFragment">
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/ivProfile"
+        android:layout_width="match_parent"
+        android:layout_height="225dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        app:civ_border_color="#C7C9D3"
+        app:civ_border_width="4dp"
+        app:civ_shadow="true"
+        app:civ_shadow_color="#959595"
+        app:civ_shadow_radius="10dp"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        tools:text="John Doe" />
+
+    <TextView
+        android:id="@+id/tvUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        tools:text="johndoe" />
+
+    <View
+        android:id="@+id/divider4"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginTop="20dp"
+        android:background="?android:attr/listDivider" />
+
+    <TextView
+        android:id="@+id/tvEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:drawableStartCompat="@drawable/ic_baseline_email_24"
+        android:drawablePadding="10dp"
+        android:textAlignment="textStart"
+        android:textSize="18sp"
+        tools:text="example@gmail.com" />
+
+    <TextView
+        android:id="@+id/tvMySports"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:drawableStartCompat="@drawable/ic_baseline_sports_basketball_24"
+        android:drawablePadding="10dp"
+        android:textAlignment="textStart"
+        android:textSize="18sp"
+        tools:text="Basketball, Football" />
+
+</LinearLayout>
