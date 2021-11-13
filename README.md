@@ -152,3 +152,10 @@ URL : https://imgur.com/a/WWjdWS2
  
 - [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
+
+
+
+## Sprint 1 (due 11/12)
+
+<img src="SC_Sprint1.gif" width=250><br>
+
