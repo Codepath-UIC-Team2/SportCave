@@ -20,25 +20,25 @@
         app:civ_shadow="true"
         app:civ_shadow_color="#959595"
         app:civ_shadow_radius="10dp"
-        tools:srcCompat="@tools:sample/avatars" />
+        tools:srcCompat="@drawable/profile" />
 
     <TextView
         android:id="@+id/tvName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="0dp"
+        android:text="John Doe"
         android:textAlignment="center"
         android:textSize="25sp"
-        android:textStyle="bold"
-        tools:text="John Doe" />
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/tvUsername"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="johndoe"
         android:textAlignment="center"
-        android:textSize="20sp"
-        tools:text="johndoe" />
+        android:textSize="20sp" />
 
     <View
         android:id="@+id/divider4"
@@ -52,21 +52,27 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        app:drawableStartCompat="@drawable/ic_baseline_email_24"
         android:drawablePadding="10dp"
-        android:textAlignment="textStart"
+        android:text="example@gmail.com"
         android:textSize="18sp"
-        tools:text="example@gmail.com" />
+        app:drawableStartCompat="@drawable/ic_baseline_email_24" />
 
     <TextView
         android:id="@+id/tvMySports"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        app:drawableStartCompat="@drawable/ic_baseline_sports_basketball_24"
         android:drawablePadding="10dp"
-        android:textAlignment="textStart"
+        android:text="Basketball, Football"
         android:textSize="18sp"
-        tools:text="Basketball, Football" />
+        app:drawableStartCompat="@drawable/ic_baseline_sports_basketball_24" />
 
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="Log out"
+        app:icon="@drawable/ic_baseline_login_24"
+        app:iconGravity="textStart" />
 </LinearLayout>

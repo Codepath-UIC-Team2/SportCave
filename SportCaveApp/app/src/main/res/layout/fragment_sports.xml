@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="50dp"
+    android:paddingTop="30dp"
+    android:paddingRight="50dp"
+    android:paddingBottom="60dp"
+    tools:context=".fragments.SportsFragment">
+
+    <ImageView
+        android:id="@+id/ivSport1"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_row="0"
+        android:layout_column="0"
+        android:layout_gravity="center"
+        android:padding="20dp"
+        tools:src="@drawable/basketball" />
+
+    <ImageView
+        android:id="@+id/ivSport2"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_row="0"
+        android:layout_column="1"
+        android:layout_gravity="center"
+        android:padding="20dp"
+        tools:src="@drawable/baseball" />
+
+    <ImageView
+        android:id="@+id/ivSport3"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_row="2"
+        android:layout_column="0"
+        android:layout_gravity="center"
+        android:padding="20dp"
+        tools:src="@drawable/soccer" />
+
+    <ImageView
+        android:id="@+id/ivSport4"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_row="2"
+        android:layout_column="1"
+        android:layout_gravity="center"
+        android:padding="20dp"
+        tools:src="@drawable/cricket" />
+
+    <ImageView
+        android:id="@+id/ivSport5"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_row="4"
+        android:layout_column="0"
+        android:layout_gravity="center"
+        android:padding="20dp"
+        tools:src="@drawable/football" />
+
+    <ImageView
+        android:id="@+id/ivSport6"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_row="4"
+        android:layout_column="1"
+        android:layout_gravity="center"
+        android:padding="20dp"
+        tools:src="@drawable/golf" />
+
+    <TextView
+        android:id="@+id/tvSport1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="1"
+        android:layout_column="0"
+        android:layout_gravity="center"
+        android:text="Basketball"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvSport2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="1"
+        android:layout_column="1"
+        android:layout_gravity="center"
+        android:text="Baseball"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvSport3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="3"
+        android:layout_column="0"
+        android:layout_gravity="center"
+        android:text="Soccer"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvSport4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="3"
+        android:layout_column="1"
+        android:layout_gravity="center"
+        android:text="Cricket"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvSport6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="5"
+        android:layout_column="1"
+        android:layout_gravity="center"
+        android:text="Golf"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvSport5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="5"
+        android:layout_column="0"
+        android:layout_gravity="center"
+        android:text="Football"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+</GridLayout>

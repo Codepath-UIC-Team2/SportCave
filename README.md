@@ -45,12 +45,15 @@ Browse sports categories to view scoring updates for domestic and international 
 * Login
    * User can log in if they already have an account
    * User should click on "Sign Up" button to create an account
+   - [x] Login UI
 
 * Register
    * User must create an account in order to get into the app
+   - [x] Signup UI
    
 * Profile
    * User should be able update their profile information and logout
+   - [x] Profile UI
    
 * Stream
    * User can select their favourite sports from the list of sports
@@ -152,3 +155,10 @@ URL : https://imgur.com/a/WWjdWS2
  
 - [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
+
+
+
+## Sprint 1 (due 11/12)
+
+<img src="SC_Sprint1.gif" width=250><br>
+
