@@ -3,12 +3,22 @@ package com.example.sportcaveapp;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
+import android.nfc.Tag;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.EditText;
+import android.widget.Toast;
+
+import com.parse.ParseUser;
+import com.parse.SignUpCallback;
+
+import com.parse.LogInCallback;
+import com.parse.ParseException;
+import com.parse.ParseUser;
+import com.parse.SignUpCallback;
 
 public class signup extends AppCompatActivity {
 
@@ -19,6 +29,9 @@ public class signup extends AppCompatActivity {
     EditText password;
     Button cancel;
     Button signUp;
+
+    public static final String TAG = "SignUP";
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -41,6 +54,41 @@ public class signup extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
+        signUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Create the ParseUser
+                ParseUser user = new ParseUser();
+                String userName = username.getText().toString();
+                String pass = password.getText().toString();
+                String userEmail = email.getText().toString();
+                user.setUsername(userName);
+                user.setPassword(pass);
+                user.setEmail(userEmail);
+                user.signUpInBackground(new SignUpCallback() {
+                    public void done(ParseException e) {
+                        if (e == null) {
+                            // Hooray! Let them use the app now.
+                            goMainActivity();
+
+                        } else {
+                            // Sign up didn't succeed. Look at the ParseException
+                            // to figure out what went wrong
+                            e.printStackTrace();
+                            Toast.makeText(getApplicationContext(), "Unable to signup", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+
+                });
+            }
+        });
+    }
+
+    private void goMainActivity() {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 }
 
