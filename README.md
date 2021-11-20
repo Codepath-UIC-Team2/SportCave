@@ -28,9 +28,9 @@ Browse sports categories to view scoring updates for domestic and international 
 
 **Required Must-have Stories**
 
-* User must create an account in order to get into the app
-* User can log in if they already have an account
-* User should be able to logout
+* [x] User must create an account in order to get into the app
+* [x] User can log in if they already have an account
+* [x] User should be able to logout
 * User can select their favourite sports from the list of sports
 * User can select different sports to view the game scores
 * User can change pages, from Stream, to Profile, to Details
@@ -43,16 +43,17 @@ Browse sports categories to view scoring updates for domestic and international 
 ### 2. Screen Archetypes
 
 * Login
-   * User can log in if they already have an account
-   * User should click on "Sign Up" button to create an account
+   * [x] User can log in if they already have an account
+   * [x] User should click on "Sign Up" button to create an account
    - [x] Login UI
 
 * Register
-   * User must create an account in order to get into the app
+   * [x] User must create an account in order to get into the app
    - [x] Signup UI
    
 * Profile
-   * User should be able update their profile information and logout
+   * [x] User should be able to logout
+   * User should be able to update their profile information
    - [x] Profile UI
    
 * Stream
