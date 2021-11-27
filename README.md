@@ -168,6 +168,6 @@ URL : https://imgur.com/a/WWjdWS2
 
 <img src="SC_Sprint2.gif" width=250><br>
 
-## Sprint 2 (due 11/26)
+## Sprint 3 (due 11/26)
 
 <img src="SC_Sprint3.gif" height=400 width=750><br>
