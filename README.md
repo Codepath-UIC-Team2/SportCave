@@ -170,4 +170,4 @@ URL : https://imgur.com/a/WWjdWS2
 
 ## Sprint 2 (due 11/26)
 
-<img src="SC_Sprint3.gif" width=250><br>
+<img src="SC_Sprint3.gif" height=400 width=750><br>
