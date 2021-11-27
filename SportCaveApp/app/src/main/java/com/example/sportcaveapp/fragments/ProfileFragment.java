@@ -11,8 +11,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.Toast;
+import android.widget.TextView;
 
 import com.example.sportcaveapp.LoginActivity;
 import com.example.sportcaveapp.R;
@@ -25,6 +26,12 @@ public class ProfileFragment extends Fragment {
     Button btnlogout;
     ParseUser currentUser;
     ImageView ivProfile;
+
+    EditText fullname;
+    TextView username;
+    EditText email;
+    Button btnUpdate;
+
 
     public static final String TAG = "ProfileFragment";
 
@@ -45,6 +52,12 @@ public class ProfileFragment extends Fragment {
         btnlogout = view.findViewById(R.id.btnLogout);
         ivProfile = view.findViewById(R.id.ivProfile);
 
+        fullname = view.findViewById(R.id.tvName);
+        username = view.findViewById(R.id.tvUsername);
+        email = view.findViewById(R.id.tvEmail);
+        btnUpdate = view.findViewById(R.id.btnUpdate);
+
+
         btnlogout.setOnClickListener(v -> {
             ParseUser.logOut();
             currentUser = ParseUser.getCurrentUser();
@@ -53,7 +66,13 @@ public class ProfileFragment extends Fragment {
             startActivity(i);
         });
 
-        ivProfile.setImageResource(R.drawable.profile);
+        currentUser = ParseUser.getCurrentUser();
+
+        fullname.setText(currentUser.get("profileName").toString());
+//        System.out.println();
+        username.setText("@"+currentUser.getUsername());
+        email.setText(currentUser.getEmail());
+//        Glide.with(getContext()).load(currentUser.getParseFile("profilePicture").getUrl()).into(ivProfile);
 
     }
 
@@ -61,9 +80,8 @@ public class ProfileFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-
-
     }
+
 
 
 

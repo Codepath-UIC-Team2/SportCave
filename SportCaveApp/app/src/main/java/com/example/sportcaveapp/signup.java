@@ -64,9 +64,13 @@ public class signup extends AppCompatActivity {
                 String userName = username.getText().toString();
                 String pass = password.getText().toString();
                 String userEmail = email.getText().toString();
+                String userFullname = name.getText().toString();
+
                 user.setUsername(userName);
                 user.setPassword(pass);
                 user.setEmail(userEmail);
+                user.put("profileName", userFullname);
+
                 user.signUpInBackground(new SignUpCallback() {
                     public void done(ParseException e) {
                         if (e == null) {
