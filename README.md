@@ -33,7 +33,7 @@ Browse sports categories to view scoring updates for domestic and international 
 * [x] User should be able to logout
 * User can select their favourite sports from the list of sports
 * User can select different sports to view the game scores
-* User can change pages, from Stream, to Profile, to Details
+* [x] User can change pages, from Stream, to Profile, to Details
 
 **Optional Nice-to-have Stories**
 
@@ -53,7 +53,7 @@ Browse sports categories to view scoring updates for domestic and international 
    
 * Profile
    * [x] User should be able to logout
-   * User should be able to update their profile information
+   * [x] User should be able to update their profile information
    - [x] Profile UI
    
 * Stream
