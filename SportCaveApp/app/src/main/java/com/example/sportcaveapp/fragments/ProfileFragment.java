@@ -7,6 +7,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,24 +15,28 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.example.sportcaveapp.LoginActivity;
 import com.example.sportcaveapp.R;
+import com.parse.ParseException;
+import com.parse.ParseFile;
 import com.parse.ParseUser;
+import com.parse.SaveCallback;
 
 import org.jetbrains.annotations.NotNull;
 
 public class ProfileFragment extends Fragment {
 
-    Button btnlogout;
     ParseUser currentUser;
     ImageView ivProfile;
-
-    EditText fullname;
-    TextView username;
-    EditText email;
+    EditText etName;
+    TextView tvUsername;
+    EditText etEmail;
+    EditText etMySports;
     Button btnUpdate;
-
+    Button btnLogout;
 
     public static final String TAG = "ProfileFragment";
 
@@ -49,30 +54,54 @@ public class ProfileFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull @NotNull View view, @Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        btnlogout = view.findViewById(R.id.btnLogout);
+
+        currentUser = ParseUser.getCurrentUser();
         ivProfile = view.findViewById(R.id.ivProfile);
-
-        fullname = view.findViewById(R.id.tvName);
-        username = view.findViewById(R.id.tvUsername);
-        email = view.findViewById(R.id.tvEmail);
+        etName = view.findViewById(R.id.etName);
+        tvUsername = view.findViewById(R.id.tvUsername);
+        etEmail = view.findViewById(R.id.etEmail);
+        etMySports = view.findViewById(R.id.etMySports);
         btnUpdate = view.findViewById(R.id.btnUpdate);
+        btnLogout = view.findViewById(R.id.btnLogout);
 
 
-        btnlogout.setOnClickListener(v -> {
+//        Glide.with(getContext()).load(currentUser.getParseFile("profilePicture").getUrl()).into(ivProfile);
+        etName.setText(currentUser.get("profileName").toString());
+        tvUsername.setText("@"+currentUser.getUsername());
+        etEmail.setText(currentUser.getEmail());
+        etMySports.setText(currentUser.get("favSports").toString());
+
+        btnUpdate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String Name = etName.getText().toString();
+                String Email = etEmail.getText().toString();
+                String MySports = etMySports.getText().toString();
+                currentUser = ParseUser.getCurrentUser();
+                currentUser.put("profileName", Name);
+                currentUser.setEmail(Email);
+                currentUser.put("favSports", MySports);
+                currentUser.saveInBackground(new SaveCallback() {
+                    @Override
+                    public void done(ParseException e) {
+                        if (e != null) {
+                            Log.e(TAG, "Error while updating!", e);
+                            Toast.makeText(getContext(), "Error while updating!", Toast.LENGTH_SHORT).show();
+                        }
+                        Log.i(TAG, "Profile successfully updated!");
+                        Toast.makeText(getContext(), "Profile successfully updated!", Toast.LENGTH_SHORT).show();
+                    }
+                });
+            }
+        });
+
+        btnLogout.setOnClickListener(v -> {
             ParseUser.logOut();
             currentUser = ParseUser.getCurrentUser();
             System.out.println(currentUser);
             Intent i = new Intent(getContext(), LoginActivity.class);
             startActivity(i);
         });
-
-        currentUser = ParseUser.getCurrentUser();
-
-        fullname.setText(currentUser.get("profileName").toString());
-//        System.out.println();
-        username.setText("@"+currentUser.getUsername());
-        email.setText(currentUser.getEmail());
-//        Glide.with(getContext()).load(currentUser.getParseFile("profilePicture").getUrl()).into(ivProfile);
 
     }
 
@@ -81,8 +110,5 @@ public class ProfileFragment extends Fragment {
         super.onCreate(savedInstanceState);
 
     }
-
-
-
 
 }

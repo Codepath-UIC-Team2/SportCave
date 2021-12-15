@@ -12,12 +12,14 @@ import com.parse.LogInCallback;
 import com.parse.ParseException;
 import com.parse.ParseUser;
 
+import org.w3c.dom.Text;
+
 public class LoginActivity extends AppCompatActivity {
     TextView titleTV;
     EditText username;
     EditText password;
     Button signIn;
-    Button signUp;
+    TextView signUp;
 
     String usernameID;
     String userPassword;
@@ -31,7 +33,7 @@ public class LoginActivity extends AppCompatActivity {
         username = (EditText) findViewById(R.id.username);
         password = (EditText) findViewById(R.id.password);
         signIn = (Button) findViewById(R.id.btnSignin);
-        signUp = (Button) findViewById(R.id.btnSignup);
+        signUp = (TextView) findViewById(R.id.btnSignup);
 
         signUp.setOnClickListener(v -> {
             Intent intent = new Intent(v.getContext(), signup.class);

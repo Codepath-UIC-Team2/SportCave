@@ -70,6 +70,7 @@ public class signup extends AppCompatActivity {
                 user.setPassword(pass);
                 user.setEmail(userEmail);
                 user.put("profileName", userFullname);
+                user.put("favSports", "Add your favorite sports here!");
 
                 user.signUpInBackground(new SignUpCallback() {
                     public void done(ParseException e) {

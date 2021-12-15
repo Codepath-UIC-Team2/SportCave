@@ -11,19 +11,20 @@
 
     <com.mikhaellopez.circularimageview.CircularImageView
         android:id="@+id/ivProfile"
-        android:layout_width="match_parent"
-        android:layout_height="225dp"
+        android:layout_width="210dp"
+        android:layout_height="210dp"
         android:layout_gravity="center"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="-10dp"
         app:civ_border_color="#C7C9D3"
         app:civ_border_width="4dp"
         app:civ_shadow="true"
         app:civ_shadow_color="#959595"
         app:civ_shadow_radius="10dp"
+        app:srcCompat="@drawable/profile"
         tools:srcCompat="@drawable/profile" />
 
     <EditText
-        android:id="@+id/tvName"
+        android:id="@+id/etName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="0dp"
@@ -40,15 +41,8 @@
         android:textAlignment="center"
         android:textSize="20sp" />
 
-    <View
-        android:id="@+id/divider4"
-        android:layout_width="match_parent"
-        android:layout_height="3dp"
-        android:layout_marginTop="20dp"
-        android:background="?android:attr/listDivider" />
-
     <EditText
-        android:id="@+id/tvEmail"
+        android:id="@+id/etEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -57,20 +51,20 @@
         android:textSize="18sp"
         app:drawableStartCompat="@drawable/ic_baseline_email_24" />
 
-    <TextView
-        android:id="@+id/tvMySports"
+    <EditText
+        android:id="@+id/etMySports"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:drawablePadding="10dp"
-        android:text="Basketball, Football"
+        android:text="What are your favorite sports?"
         android:textSize="18sp"
         app:drawableStartCompat="@drawable/ic_baseline_sports_basketball_24" />
 
     <Button
         android:id="@+id/btnUpdate"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:layout_marginTop="25dp"
         android:text="update"
         app:icon="@drawable/ic_baseline_update_24"
@@ -79,8 +73,9 @@
     <Button
         android:id="@+id/btnLogout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="0dp"
+        android:backgroundTint="#C32B42"
         android:text="Log out"
         app:icon="@drawable/ic_baseline_login_24"
         app:iconGravity="textStart" />
