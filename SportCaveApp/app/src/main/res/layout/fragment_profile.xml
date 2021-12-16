@@ -20,14 +20,26 @@
         app:civ_shadow="true"
         app:civ_shadow_color="#959595"
         app:civ_shadow_radius="10dp"
-        app:srcCompat="@drawable/profile"
         tools:srcCompat="@drawable/profile" />
+
+    <Button
+        android:id="@+id/btnImage"
+        android:layout_width="45dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="65dp"
+        android:layout_marginTop="-80dp"
+        android:backgroundTint="@color/purple_500"
+        android:clickable="true"
+        app:icon="@android:drawable/ic_menu_camera"
+        app:iconGravity="top"
+        app:tint="@color/white" />
 
     <EditText
         android:id="@+id/etName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="0dp"
+        android:layout_marginTop="25dp"
         android:text="John Doe"
         android:textAlignment="center"
         android:textSize="25sp"
@@ -79,4 +91,5 @@
         android:text="Log out"
         app:icon="@drawable/ic_baseline_login_24"
         app:iconGravity="textStart" />
+
 </LinearLayout>
