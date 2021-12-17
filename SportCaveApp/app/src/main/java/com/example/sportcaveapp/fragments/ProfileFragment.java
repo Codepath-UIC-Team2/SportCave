@@ -104,6 +104,10 @@ public class ProfileFragment extends Fragment {
                 String Email = etEmail.getText().toString();
                 String MySports = etMySports.getText().toString();
                 currentUser = ParseUser.getCurrentUser();
+                if (Email.isEmpty() || Name.isEmpty()) {
+                    Toast.makeText(getContext(), "Name/email cannot be empty", Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 if (photoFile != null) {
                     currentUser.put("profilePicture", new ParseFile(photoFile));
                 }

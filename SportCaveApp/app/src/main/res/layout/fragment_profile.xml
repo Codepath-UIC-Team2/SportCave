@@ -24,16 +24,18 @@
 
     <Button
         android:id="@+id/btnImage"
-        android:layout_width="45dp"
-        android:layout_height="50dp"
+        android:layout_width="50dp"
+        android:layout_height="53dp"
         android:layout_gravity="center"
         android:layout_marginLeft="65dp"
         android:layout_marginTop="-80dp"
         android:backgroundTint="@color/purple_500"
         android:clickable="true"
+        app:cornerRadius="35dp"
         app:icon="@android:drawable/ic_menu_camera"
         app:iconGravity="top"
-        app:tint="@color/white" />
+        app:iconTint="@color/white"
+        app:iconTintMode="multiply" />
 
     <EditText
         android:id="@+id/etName"
@@ -42,6 +44,7 @@
         android:layout_marginTop="25dp"
         android:text="John Doe"
         android:textAlignment="center"
+        android:hint="Name"
         android:textSize="25sp"
         android:textStyle="bold" />
 
@@ -60,6 +63,7 @@
         android:layout_marginTop="20dp"
         android:drawablePadding="10dp"
         android:text="example@gmail.com"
+        android:hint="Email"
         android:textSize="18sp"
         app:drawableStartCompat="@drawable/ic_baseline_email_24" />
 
@@ -69,7 +73,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:drawablePadding="10dp"
-        android:text="What are your favorite sports?"
+        android:text="Add your favorite sports here!"
+        android:hint="Add your favorite sports here!"
         android:textSize="18sp"
         app:drawableStartCompat="@drawable/ic_baseline_sports_basketball_24" />
 

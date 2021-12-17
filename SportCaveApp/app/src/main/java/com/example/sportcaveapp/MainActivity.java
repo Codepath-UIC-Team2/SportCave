@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import android.widget.ImageView;
 
 import com.example.sportcaveapp.fragments.ProfileFragment;
+import com.example.sportcaveapp.fragments.SocialFragment;
 import com.example.sportcaveapp.fragments.SportsFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -41,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
                     fragment = new SportsFragment();
                     break;
                 case R.id.action_social:
-                    fragment = new SportsFragment();
+                    fragment = new SocialFragment();
                     break;
                 case R.id.action_profile:
                 default:

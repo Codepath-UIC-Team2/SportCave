@@ -1,14 +1,28 @@
 package com.example.sportcaveapp;
 
-import androidx.appcompat.app.AppCompatActivity;
+import com.parse.ParseClassName;
+import com.parse.ParseObject;
+import com.parse.ParseUser;
 
-import android.os.Bundle;
+@ParseClassName("Reaction")
+public class Reaction extends ParseObject {
+    public static final String KEY_COMMENT = "comment";
+    public static final String KEY_USER = "user";
+    public static final String KEY_CREATED_KEY = "createdAt";
 
-public class Reaction extends AppCompatActivity {
+    public String getComment() {
+        return getString(KEY_COMMENT);
+    }
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_reaction);
+    public void setComment(String comment) {
+        put(KEY_COMMENT, comment);
+    }
+
+    public ParseUser getUser() {
+        return getParseUser(KEY_USER);
+    }
+
+    public void setUser(ParseUser user) {
+        put(KEY_USER, user);
     }
 }

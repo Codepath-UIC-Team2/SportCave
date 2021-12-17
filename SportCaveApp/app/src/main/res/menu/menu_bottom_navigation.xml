@@ -10,7 +10,7 @@
     <item
         android:id="@+id/action_social"
         android:icon="@drawable/ic_baseline_add_comment_24"
-        android:title="social"
+        android:title="Social"
         app:showAsAction="always" />
     <item
         android:id="@+id/action_profile"

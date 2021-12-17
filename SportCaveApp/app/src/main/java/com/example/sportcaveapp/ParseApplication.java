@@ -10,6 +10,8 @@ public class ParseApplication extends Application {
     public void onCreate() {
         super.onCreate();
 
+        ParseObject.registerSubclass(Reaction.class);
+
         Parse.initialize(new Parse.Configuration.Builder(this)
                 .applicationId("JcHo1ixhXeij62mWqJVwuABZn5lO3J2EZnVfscLe")
                 .clientKey("BVSpBGomWrYeUri5qtS5av9UQXIamG8tKBf9mUCo")

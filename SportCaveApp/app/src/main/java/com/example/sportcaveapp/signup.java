@@ -66,6 +66,10 @@ public class signup extends AppCompatActivity {
                 String userEmail = email.getText().toString();
                 String userFullname = name.getText().toString();
 
+                if (userName.isEmpty() || pass.isEmpty() || userFullname.isEmpty() || userEmail.isEmpty()) {
+                    Toast.makeText(getApplicationContext(), "Please fill all fields!", Toast.LENGTH_SHORT).show();
+                }
+
                 user.setUsername(userName);
                 user.setPassword(pass);
                 user.setEmail(userEmail);
@@ -82,7 +86,7 @@ public class signup extends AppCompatActivity {
                             // Sign up didn't succeed. Look at the ParseException
                             // to figure out what went wrong
                             e.printStackTrace();
-                            Toast.makeText(getApplicationContext(), "Unable to signup", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), "Unable to signup!", Toast.LENGTH_SHORT).show();
                         }
                     }
 
