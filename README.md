@@ -174,4 +174,4 @@ URL : https://imgur.com/a/WWjdWS2
 
 <img src="SC_Sprint3.gif" height=325 width=600><br>
 
-<img src="SC_update.gif" width=250><br>
+<img src="SportCaveApp_200_rz.gif" width=250><br>
