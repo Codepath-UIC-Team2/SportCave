@@ -31,10 +31,11 @@ Browse sports categories to view scoring updates for domestic and international 
 * [x] User can log in if they already have an account
 * [x] User can logout from the app
 * [x] User can change pages from Sports -> Social -> Profile
-* [x] User can update their profile info and image
+* [x] User can update their profile information
+* [x] User can use the smartphone camera to add a profile image
 * [x] User can view the Social stream
 * [x] User can post a reaction
-* [ ] User can select their a sport to view the games
+* [ ] User can select a sport to view the games
 * [ ] User can select a game to view the scores
 
 **Optional Nice-to-have Stories**
@@ -48,27 +49,36 @@ Browse sports categories to view scoring updates for domestic and international 
 
 * Login
    * [x] User can log in if they already have an account
-   * [x] User should click on "Sign Up" button to create an account
+   * [x] User can click on "Sign Up" button to create an account
    - [x] Login UI
 
-* Register
-   * [x] User must create an account in order to get into the app
-   - [x] Signup UI
+* Sign up
+   * [x] User can create an account to access the app
+   * [x] Sign up UI
    
+* Sports
+   * [ ] User can select from six sports
+   * [x] Sports UI
+
+* Games
+   * [ ] User can view games for the selected sport
+   * [ ] User can select a game to view the scores
+   * [ ] Games UI
+
+* Scores
+   * [ ] User can view scores of the selected game
+   * [ ] Sports UI
+
+* Social
+    * [x] User can post their reaction of a game
+    * [x] User can view reactions posted by other users
+    * [x] Social UI
+
 * Profile
-   * [x] User should be able to logout
-   * [x] User should be able to update their profile information
-   - [x] Profile UI
-   
-* Stream
-   * User can select their favourite sports from the list of sports
-
-* Stream Page 2
-    * User can post their reaction of the game
-
-* Details
-   * User can select different sports to view the game scores
-   * User should click on a link to watch the game on the game's website
+   * [x] User can logout from the app
+   * [x] User can update their profile information
+   * [x] User can use the smartphone camera to add a profile image
+   * [x] Profile UI
 
 ### 3. Navigation
 
@@ -97,7 +107,7 @@ Browse sports categories to view scoring updates for domestic and international 
 * Scores
   * Games
 
-## Hand-Sketched Wireframes
+## Wireframes
 <img src="Codepath_screenshot2.PNG" width=600>
 Image URL : https://imgur.com/a/mM8O8yB
 
