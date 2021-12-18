@@ -162,6 +162,6 @@ URL : https://imgur.com/a/WWjdWS2
 
 ## Sprint 3 (due 11/26)
 
-<img src="SC_Sprint3.gif" height=200 width=375><br>
+<img src="SC_Sprint3.gif" height=325 width=500><br>
 
 <img src="SC_update.gif" width=250><br>
