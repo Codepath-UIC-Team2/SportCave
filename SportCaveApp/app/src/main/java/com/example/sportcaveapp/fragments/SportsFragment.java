@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.example.sportcaveapp.Basketball;
 import com.example.sportcaveapp.Football;
 import com.example.sportcaveapp.LoginActivity;
 import com.example.sportcaveapp.MainActivity;
@@ -30,6 +31,7 @@ public class SportsFragment extends Fragment {
     ImageView ivSport4;
     ImageView ivSport5;
     ImageView ivSport6;
+
 
     public SportsFragment() {
         // Required empty public constructor
@@ -53,17 +55,25 @@ public class SportsFragment extends Fragment {
         ivSport5.setImageResource(R.drawable.football);
         ivSport6.setImageResource(R.drawable.golf);
 
+
         ivSport3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d("Sport","Not good at all");
+
                 int color = Color.parseColor("#ff0000"); //The color u want
                 ivSport3.setBackgroundColor(color);
                 gotoFootball();
 
+            }
+        });
 
+        ivSport1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
-
+                int color = Color.parseColor("#ff0000"); //The color u want
+                ivSport1.setBackgroundColor(color);
+                gotoBasketball();
 
             }
         });
@@ -92,6 +102,10 @@ public class SportsFragment extends Fragment {
 
     private void gotoFootball() {
         Intent intent = new Intent(getContext(), Football.class);
+        startActivity(intent);
+    }
+    private void gotoBasketball() {
+        Intent intent = new Intent(getContext(), Basketball.class);
         startActivity(intent);
     }
 

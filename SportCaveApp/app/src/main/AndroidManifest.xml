@@ -20,6 +20,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SportCaveApp">
         <activity
+            android:name=".Basketball"
+            android:exported="true" />
+        <activity
             android:name=".Football"
             android:exported="true" />
 

@@ -23,13 +23,13 @@
 
     <ImageView
         android:id="@+id/ivSport2"
-        android:layout_width="150dp"
+        android:layout_width="147dp"
         android:layout_height="150dp"
         android:layout_row="0"
         android:layout_column="1"
         android:layout_gravity="center"
-        android:padding="20dp"
-        tools:src="@drawable/baseball" />
+        android:padding="0dp"
+        tools:src="@drawable/f1_pic" />
 
     <ImageView
         android:id="@+id/ivSport3"
@@ -93,7 +93,7 @@
         android:layout_row="1"
         android:layout_column="1"
         android:layout_gravity="center"
-        android:text="Baseball"
+        android:text="Formula 1"
         android:textAlignment="center"
         android:textSize="16sp"
         android:textStyle="bold" />
@@ -124,7 +124,7 @@
 
     <TextView
         android:id="@+id/tvSport6"
-        android:layout_width="wrap_content"
+        android:layout_width="41dp"
         android:layout_height="wrap_content"
         android:layout_row="5"
         android:layout_column="1"
@@ -136,7 +136,7 @@
 
     <TextView
         android:id="@+id/tvSport5"
-        android:layout_width="wrap_content"
+        android:layout_width="76dp"
         android:layout_height="wrap_content"
         android:layout_row="5"
         android:layout_column="0"
