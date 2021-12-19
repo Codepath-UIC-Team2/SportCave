@@ -49,7 +49,7 @@ public class SportsFragment extends Fragment {
         ivSport6 = view.findViewById(R.id.ivSport6);
 
         ivSport1.setImageResource(R.drawable.basketball);
-        ivSport2.setImageResource(R.drawable.baseball);
+        ivSport2.setImageResource(R.drawable.f1_pic);
         ivSport3.setImageResource(R.drawable.soccer);
         ivSport4.setImageResource(R.drawable.cricket);
         ivSport5.setImageResource(R.drawable.football);
