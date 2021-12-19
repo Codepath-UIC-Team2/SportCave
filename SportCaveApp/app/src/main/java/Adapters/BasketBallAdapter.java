@@ -1,6 +1,11 @@
 package Adapters;
 
+import static com.parse.Parse.getApplicationContext;
+
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,8 +16,12 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.sportcaveapp.Basketball;
 import com.example.sportcaveapp.R;
+import com.github.twocoffeesoneteam.glidetovectoryou.GlideToVectorYou;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.List;
 
 import models.BasketBall_Game;
@@ -91,7 +100,7 @@ public class ViewHolder extends RecyclerView.ViewHolder{
 
     }
 
-    public void bind(BasketBall_Game match) {
+    public void bind(BasketBall_Game match)  {
         tv_team1.setText(match.getTeam1());
         tv_team2.setText(match.getTeam2());
 
@@ -106,12 +115,14 @@ public class ViewHolder extends RecyclerView.ViewHolder{
         tv_goals2_q4.setText(match.getGoals2_q4());
         tv_location.setText(match.getLocation());
 
-
-
+        //Uri myurl = Uri.parse(match.getFlag());
+       // GlideToVectorYou.justLoadImage(R.layout.item_basketball, myurl, iv_location);
 
         Glide.with(context).load(match.getLogo1()).into(iv_team1);
         Glide.with(context).load(match.getLogo2()).into(iv_team2);
         Glide.with(context).load(match.getFlag()).into(iv_location);
+
+
 
     }
 }
