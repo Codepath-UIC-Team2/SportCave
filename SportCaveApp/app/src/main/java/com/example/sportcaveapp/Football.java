@@ -1,6 +1,8 @@
 package com.example.sportcaveapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -19,6 +21,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
+import Adapters.MatchAdapter;
 import models.Match;
 import okhttp3.Headers;
 
@@ -29,12 +32,21 @@ public class Football extends AppCompatActivity {
     List<Match> matches;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        RecyclerView rv = findViewById(R.id.rv);
+        matches = new ArrayList<>();
+
+
+       MatchAdapter matchAdapter =  new MatchAdapter(this,matches);
+       Log.i(TAG,matchAdapter.toString());
+       rv.setAdapter(matchAdapter);
+       rv.setLayoutManager(new LinearLayoutManager(this));
+
 
         AsyncHttpClient client = new AsyncHttpClient();
         RequestParams params = new RequestParams();
         RequestHeaders requestHeaders = new RequestHeaders();
 
-        matches = new ArrayList<>();
+
 
         requestHeaders.put("x-rapidapi-key", "dd27d337f8178a55f9009641fd988ee0");
 
@@ -66,6 +78,8 @@ public class Football extends AppCompatActivity {
 
 
                     }
+                    matchAdapter.notifyDataSetChanged();
+
 
 
                     Log.i(TAG,"Results " + results.length());
