@@ -31,6 +31,8 @@ public class SportsFragment extends Fragment {
     ImageView ivSport4;
     ImageView ivSport5;
     ImageView ivSport6;
+    int color;
+
 
 
     public SportsFragment() {
@@ -40,6 +42,8 @@ public class SportsFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull @NotNull View view, @Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+
 
         ivSport1 = view.findViewById(R.id.ivSport1);
         ivSport2 = view.findViewById(R.id.ivSport2);
@@ -54,6 +58,12 @@ public class SportsFragment extends Fragment {
         ivSport4.setImageResource(R.drawable.cricket);
         ivSport5.setImageResource(R.drawable.football);
         ivSport6.setImageResource(R.drawable.golf);
+        color = Color.parseColor("#ffffff"); //The color u want
+        ivSport3.setBackgroundColor(color);
+        color = Color.parseColor("#ffffff"); //The color u want
+        ivSport1.setBackgroundColor(color);
+
+
 
 
         ivSport3.setOnClickListener(new View.OnClickListener() {
@@ -63,6 +73,7 @@ public class SportsFragment extends Fragment {
                 int color = Color.parseColor("#ff0000"); //The color u want
                 ivSport3.setBackgroundColor(color);
                 gotoFootball();
+
 
             }
         });
@@ -74,6 +85,7 @@ public class SportsFragment extends Fragment {
                 int color = Color.parseColor("#ff0000"); //The color u want
                 ivSport1.setBackgroundColor(color);
                 gotoBasketball();
+
 
             }
         });
