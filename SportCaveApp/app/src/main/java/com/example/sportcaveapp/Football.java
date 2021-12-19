@@ -59,7 +59,7 @@ public class Football extends AppCompatActivity {
             @Override
             public void onSuccess(int i, Headers headers, JSON json) {
                 Log.d(TAG,"Good to go");
-                Toast.makeText(Football.this,"Success!", Toast.LENGTH_SHORT).show();
+               // Toast.makeText(Football.this,"Success!", Toast.LENGTH_SHORT).show();
                 JSONObject jsonObject = json.jsonObject;
 
                 try {

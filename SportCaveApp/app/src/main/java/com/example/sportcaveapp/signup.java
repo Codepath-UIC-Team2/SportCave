@@ -86,7 +86,7 @@ public class signup extends AppCompatActivity {
                             // Sign up didn't succeed. Look at the ParseException
                             // to figure out what went wrong
                             e.printStackTrace();
-                            Toast.makeText(getApplicationContext(), "Unable to signup!", Toast.LENGTH_SHORT).show();
+                            //Toast.makeText(getApplicationContext(), "Unable to signup!", Toast.LENGTH_SHORT).show();
                         }
                     }
 
