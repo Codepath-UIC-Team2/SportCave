@@ -1,6 +1,8 @@
 package com.example.sportcaveapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -24,6 +26,8 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
+import Adapters.BasketBallAdapter;
+import Adapters.MatchAdapter;
 import models.BasketBall_Game;
 import models.Match;
 import okhttp3.Headers;
@@ -41,8 +45,12 @@ public class Basketball extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_basketball);
         Log.i(TAG,"Date today is "+date);
-        games = new ArrayList<>();
 
+        RecyclerView Rec = findViewById(R.id.rv);
+        games = new ArrayList<>();
+        BasketBallAdapter matchAdapter =  new BasketBallAdapter(this,games);
+        Rec.setAdapter(matchAdapter);
+        Rec.setLayoutManager(new LinearLayoutManager(this));
 
         AsyncHttpClient client = new AsyncHttpClient();
         RequestParams params = new RequestParams();
@@ -81,6 +89,8 @@ public class Basketball extends AppCompatActivity {
 
 
                     }
+                    matchAdapter.notifyDataSetChanged();
+
 
 
 
