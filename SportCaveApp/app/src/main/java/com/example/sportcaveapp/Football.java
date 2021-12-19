@@ -30,16 +30,20 @@ public class Football extends AppCompatActivity {
     public static final String TAG = "Football";
     private BottomNavigationView bottomNavigationView;
     List<Match> matches;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        RecyclerView rv = findViewById(R.id.rv);
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_football);
+
+        RecyclerView Rec = findViewById(R.id.rv);
         matches = new ArrayList<>();
 
 
        MatchAdapter matchAdapter =  new MatchAdapter(this,matches);
        Log.i(TAG,matchAdapter.toString());
-       rv.setAdapter(matchAdapter);
-       rv.setLayoutManager(new LinearLayoutManager(this));
+       Rec.setAdapter(matchAdapter);
+       Rec.setLayoutManager(new LinearLayoutManager(this));
 
 
         AsyncHttpClient client = new AsyncHttpClient();
@@ -100,7 +104,6 @@ public class Football extends AppCompatActivity {
                 Toast.makeText(Football.this,"Bad!", Toast.LENGTH_SHORT).show();
             }
         });
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_football);
+
     }
 }

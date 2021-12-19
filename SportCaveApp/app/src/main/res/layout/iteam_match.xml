@@ -5,10 +5,30 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
+    <TextView
+        android:id="@+id/tvgoals1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="58dp"
+        android:layout_marginEnd="245dp"
+        android:layout_toEndOf="@+id/ivteam1" />
+
+    <TextView
+        android:id="@+id/tvname1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivteam2"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="353dp" />
+
     <ImageView
         android:id="@+id/ivteam1"
-        android:layout_width="119dp"
-        android:layout_height="118dp"
+        android:layout_width="107dp"
+        android:layout_height="96dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="14dp"
@@ -25,15 +45,6 @@
         android:layout_marginTop="17dp"
         app:srcCompat="@drawable/basketball" />
 
-    <TextView
-        android:id="@+id/tvgoals1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/ivteam1"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="111dp"
-        android:layout_marginTop="40dp"
-        tools:visibility="0" />
 
     <TextView
         android:id="@+id/tvgoals2"
@@ -41,19 +52,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="123dp"
-        tools:visibility="0" />
-
-    <TextView
-        android:id="@+id/tvname1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/ivteam1"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="33dp"
-        android:layout_marginTop="134dp"
-        tools:visibility="Team1" />
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="157dp" />
 
     <TextView
         android:id="@+id/tvname2"
@@ -61,9 +61,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/ivteam2"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="34dp"
-        android:layout_marginEnd="41dp"
-        tools:visibility="Team2" />
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="49dp" />
 
     <TextView
         android:id="@+id/textView5"
@@ -76,7 +75,8 @@
         android:layout_marginEnd="72dp"
         android:layout_toStartOf="@+id/tvgoals2"
         android:layout_toEndOf="@+id/tvgoals1"
-        android:text="VS" />
+        android:text="VS"
+        tools:ignore="UnknownId" />
 
     <Button
         android:id="@+id/button"
