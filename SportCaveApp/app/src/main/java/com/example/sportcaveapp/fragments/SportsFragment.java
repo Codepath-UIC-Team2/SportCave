@@ -1,16 +1,23 @@
 package com.example.sportcaveapp.fragments;
 
+import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.Toast;
 
+import com.example.sportcaveapp.Football;
+import com.example.sportcaveapp.LoginActivity;
+import com.example.sportcaveapp.MainActivity;
 import com.example.sportcaveapp.R;
 
 import org.jetbrains.annotations.NotNull;
@@ -45,7 +52,23 @@ public class SportsFragment extends Fragment {
         ivSport4.setImageResource(R.drawable.cricket);
         ivSport5.setImageResource(R.drawable.football);
         ivSport6.setImageResource(R.drawable.golf);
+
+        ivSport3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d("Sport","Not good at all");
+                int color = Color.parseColor("#ff0000"); //The color u want
+                ivSport3.setBackgroundColor(color);
+                gotoFootball();
+
+
+
+
+
+            }
+        });
     }
+
 
 
 
@@ -65,6 +88,11 @@ public class SportsFragment extends Fragment {
 
 
 
+    }
+
+    private void gotoFootball() {
+        Intent intent = new Intent(getContext(), Football.class);
+        startActivity(intent);
     }
 
 
