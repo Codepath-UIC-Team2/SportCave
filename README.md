@@ -42,6 +42,8 @@ Browse sports categories to view scoring updates for domestic and international 
 
 * [ ] User can post photos to Social feed
 * [ ] User can search the Social feed to reactions by #game
+* [ ] User can click a reaction to view the user profile
+* [ ] User cannot post a reaction unless hashtagged with a sport and a game
 * [ ] User can pull to refresh for real-time Sports and Social data
 * [ ] User can click livestreaming link to watch the game
 
