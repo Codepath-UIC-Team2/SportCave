@@ -35,8 +35,7 @@ Browse sports categories to view scoring updates for domestic and international 
 * [x] User can use the smartphone camera to add a profile image
 * [x] User can view the Social stream
 * [x] User can post a reaction
-* [ ] User can select a sport to view the games
-* [ ] User can select a game to view the scores
+* [x] User can select at least two sport and view the games and scores
 
 **Optional Nice-to-have Stories**
 
@@ -45,7 +44,11 @@ Browse sports categories to view scoring updates for domestic and international 
 * [ ] User can click a reaction to view the user profile
 * [ ] User cannot post a reaction unless hashtagged with a sport and a game
 * [ ] User can pull to refresh for real-time Sports and Social data
+* [ ] Create and update actions are changed in real-time
 * [ ] User can click livestreaming link to watch the game
+* [ ] User can favorite sports rather than manually entering them in the Profile
+* [ ] User can view games and scores for more than two sports
+* [ ] User can view a map to see games by location
 
 ### 2. Screen Archetypes
 
@@ -59,17 +62,12 @@ Browse sports categories to view scoring updates for domestic and international 
    * [x] Sign up UI
    
 * Sports
-   * [ ] User can select from six sports
+   * [x] User can select sports
    * [x] Sports UI
 
-* Games
-   * [ ] User can view games for the selected sport
-   * [ ] User can select a game to view the scores
-   * [ ] Games UI
-
-* Scores
-   * [ ] User can view scores of the selected game
-   * [ ] Sports UI
+* Games / Scores
+   * [x] User can view games and scores for the selected sport
+   * [x] Games / Scores UI
 
 * Social
     * [x] User can post their reaction of a game
@@ -148,10 +146,8 @@ URL : https://imgur.com/a/WWjdWS2
    | createdAt    | DateTime | date/time when post is created |
 
 ### Networking
-* Games Page
-  * (Read/GET): Query games for selected sport from API
-* Scores Page
-  * (Read/GET): Query scores for selected game from API
+* Games / Scores Page
+  * (Read/GET): Query games and scores for selected sport from API
 * Social Page
   * (Create/POST): Create a comment and post it to the Social stream
   * (Read/GET): Query all reactions from database
@@ -159,10 +155,6 @@ URL : https://imgur.com/a/WWjdWS2
   * (Read/GET) Query logged in User object
   * (Update/PUT) Update user profile attributes
  
-- [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
-
-
 
 ## Sprint 1 (due 11/12)
 
@@ -176,9 +168,11 @@ URL : https://imgur.com/a/WWjdWS2
 
 <img src="SC_Sprint3.gif" height=325 width=600><br>
 
+## Updated GIF (12/17)
+
 <img src="SportCaveApp_200_rz.gif" width=250><br>
 
-## Final Version of the App SportCave(date 12/19)
+## Final Version of the SportCave App (12/19)
 
 <img src="FinalGif_SportCave.gif" width=500><br>
 
