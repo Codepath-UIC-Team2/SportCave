@@ -156,22 +156,6 @@ URL : https://imgur.com/a/WWjdWS2
   * (Update/PUT) Update user profile attributes
  
 
-## Sprint 1 (due 11/12)
-
-<img src="SC_Sprint1.gif" width=250><br>
-
-## Sprint 2 (due 11/19)
-
-<img src="SC_Sprint2.gif" width=250><br>
-
-## Sprint 3 (due 11/26)
-
-<img src="SC_Sprint3.gif" height=325 width=600><br>
-
-## Updated GIF (12/17)
-
-<img src="SportCaveApp_200_rz.gif" width=250><br>
-
 ## Final Version of the SportCave App (12/19)
 
 <img src="FinalGif_SportCave.gif" width=500><br>
