@@ -157,5 +157,5 @@ URL : https://imgur.com/a/WWjdWS2
 
 ## SportCave App - Current Progress (12/22/21)
 
-<img src="SC_Current_12-22.gif" width=500><br>
+<img src="SC_Current_12-22.gif" width=200><br>
 
