@@ -56,41 +56,43 @@ An Android mobile app—browse sports, view scoring updates for domestic and int
 ### 2. Screen Archetypes
 
 * Login / Sign Up
-    * [x] Accept text field input to sign in or sign up
-    * [x] Verify form input is complete and valid
+    * [x] Setup the Parse SDK and connect to the Parse server
+    * [x] Accept form input for sign in and sign up and verify it is complete and valid
+    * [x] Allow user to sign up for a new account using Parse authentication
+    * [x] Allow user to sign in to their account
     * [x] Implement default values for profile input options not displayed
-    * [x] Integrate Parse SDK
-    * [x] Send request to Parse server to authenticate or create new user account
-    * [x] Persist logged in user upon app restart
-    * [x] Finish activity when navigating away, not available in backstack
+    * [x] The current signed in user is persisted across app restarts
+    * [x] Finish activity when navigating away so it's not available in backstack
    
 * Stream - Sports
     * [x] Allow user to select from a range of provided sports
-    * [x] Display text (sports names) and media (sports icons)
+    * [x] Display text (sports names)
+    * [x] Use the Glide library to display media (sports icons)
 
 * Detail - Games / Scores
-    * [x] Send network requests to retrieve games and scores for the selected sport
-    * [x] Organize and display text (names, scores) and media (flags, logos) from source data
+    * [x] Use the AsyncHttpClient library to make network requests to each sport API and retrieve games and scores for the selected sport
+    * [x] Parse JSON objects retrieved to display team names and scores
+    * [x] Use the Glide library to display media (flags, logos) from source data
 
 * Stream - Social
-    * [x] Send request to Parse server to retrieve reactions posted by any user, including 'created at' datetime and profile photos
+    * [x] Query Parse server to retrieve reactions posted by any user, including 'created at' datetime and profile photos
     * [x] Display 'created at' datetime in relative format
-    * [x] Display user profile photos in fixed size
-    * [x] Use search bar to request filtered results
-    * [x] Send request to Parse server to retrieve a filtered list of reactions
+    * [x] Use Glide to display user profile photos in fixed square size
+    * [x] Use search bar to query Parse server and retrieve a filtered list of reactions
 
 * Creation - Social
-    * [x] Accept user input to post new reaction
-    * [x] Validate text field for completeness before creation
+    * [x] Accept and validate text field input for new reaction
     * [x] Send request to Parse server to create new item and attribute to logged in user
-    * [x] Display new reaction on Social stream in real-time without need for refresh 
+    * [x] Manually insert newly posted reaction in Social stream so it is immediately visible without the need for a full refresh 
     
 * Profile
-    * [x] Send request to Parse server to retrieve profile information and image for logged in user
-    * [x] Use smartphone camera to modify profile photo
+    * [x] Query Parse server to retrieve profile information and image for logged in user
+    * [x] Use the Glide library to display default or user-selected profile photo
+    * [x] Launch smartphone camera to take new profile photo
+    * [x] Use the bitmap to display a preview of the photo in the image view 
     * [x] Use text field input to modify profile information
-    * [x] Send network request to save updated profile information for logged in user
-    * [x] Allow user to sign out of account
+    * [x] Send request to Parse server to save updated profile information for logged in user
+    * [x] Allow user to sign out of their account
 
 ### 3. Navigation
 
@@ -153,7 +155,7 @@ URL : https://imgur.com/a/WWjdWS2
   * (Read/GET) Query logged in User object
   * (Update/PUT) Update user profile attributes
 
-## Final Version of the SportCave App (12/19)
+## SportCave App - Current Progress (12/22/21)
 
-<img src="FinalGif_SportCave.gif" width=500><br>
+<img src="SC_Current_12-22.gif" width=500><br>
 
