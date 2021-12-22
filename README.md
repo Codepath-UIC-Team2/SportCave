@@ -11,21 +11,21 @@ Original App Design Project
 
 ## Overview
 ### Description
-Browse sports categories to view scoring updates for domestic and international games. Connect with other sports fans.
+An Android mobile app—browse sports, view scoring updates for domestic and international games, and connect with fellow sports fans by sharing reactions.
 
 ### App Evaluation
 - **Category:** Sports / Social
-- **Mobile:** Easier to check for updates and post reactions on-the-go, use camera to post photos to reactions feed and update profile photo.
-- **Story:** Allows users to view scoring updates for different sports in one location rather than scouring the Internet every time. Connect with fellow sports fans by sharing reactions.
+- **Mobile:** Check for scoring updates and post reactions on-the-go, use camera to post photos to reactions feed and update profile photo.
+- **Story:** SportCave allows users to receive updates for different sports in one location rather than scouring different platforms for each sport. Present sports scores apps do not incorporate user profiles and social aspects; SportCave provides users the opportunity to connect with fellow fans by sharing reactions.
 - **Market:** Any sports fan would enjoy this app.
 - **Habit:**  Users can check back as often as they'd like, multiple times a day
-- **Scope:** Initial features are to view scoring updates and to share reactions with other fans. App can be expanded to include livestreaming links and include pull-to-refresh and search features.
+- **Scope:** Initial features are to view scoring updates and to share reactions with other fans. App can be expanded to include livestreaming links and map and calendar functionalities.
 
 ## Product Spec
 
-### 1. User Stories (Required and Optional)
+### 1. User Stories
 
-**Required Must-have Stories**
+**Required Stories**
 
 * [x] User can create an account to access the app
 * [x] User can log in if they already have an account
@@ -35,20 +35,23 @@ Browse sports categories to view scoring updates for domestic and international 
 * [x] User can use the smartphone camera to add a profile image
 * [x] User can view the Social stream
 * [x] User can post a reaction
-* [x] User can select at least two sport and view the games and scores
+* [x] User can select at least two sports and view games and scores
 
-**Optional Nice-to-have Stories**
+**Optional Stories**
 
+* [x] Create and update actions are changed in real-time
+* [x] User can search reactions in the Social feed
 * [ ] User can post photos to Social feed
-* [ ] User can search the Social feed to reactions by #game
 * [ ] User can click a reaction to view the user profile
-* [ ] User cannot post a reaction unless hashtagged with a sport and a game
 * [ ] User can pull to refresh for real-time Sports and Social data
-* [ ] Create and update actions are changed in real-time
-* [ ] User can click livestreaming link to watch the game
 * [ ] User can favorite sports rather than manually entering them in the Profile
 * [ ] User can view games and scores for more than two sports
+
+**Stretch Stories**
+
+* [ ] User can click livestreaming link to watch the game
 * [ ] User can view a map to see games by location
+* [ ] User can view a calendar for games and set reminders
 
 ### 2. Screen Archetypes
 
@@ -108,19 +111,15 @@ Browse sports categories to view scoring updates for domestic and international 
   * Games
 
 ## Wireframes
+
 <img src="Codepath_screenshot2.PNG" width=600>
 Image URL : https://imgur.com/a/mM8O8yB
-
-
-### [BONUS] Digital Wireframes & Mockups
 URL: https://www.figma.com/file/9bkalDyIyTSFFvTYLGldzO/SportCave?node-id=0%3A1
 
-### [BONUS] Interactive Prototype
+### Interactive Prototype
 
 <img src="wireframes.gif" width=400>
 URL : https://imgur.com/a/WWjdWS2
-
-
 
 ## Schema 
 ### Models
@@ -154,7 +153,6 @@ URL : https://imgur.com/a/WWjdWS2
 * Profile Page
   * (Read/GET) Query logged in User object
   * (Update/PUT) Update user profile attributes
- 
 
 ## Final Version of the SportCave App (12/19)
 
