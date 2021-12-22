@@ -55,33 +55,42 @@ An Android mobile app—browse sports, view scoring updates for domestic and int
 
 ### 2. Screen Archetypes
 
-* Login
-   * [x] User can log in if they already have an account
-   * [x] User can click on "Sign Up" button to create an account
-   - [x] Login UI
-
-* Sign up
-   * [x] User can create an account to access the app
-   * [x] Sign up UI
+* Login / Sign Up
+    * [x] Accept text field input to sign in or sign up
+    * [x] Verify form input is complete and valid
+    * [x] Implement default values for profile input options not displayed
+    * [x] Integrate Parse SDK
+    * [x] Send request to Parse server to authenticate or create new user account
+    * [x] Persist logged in user upon app restart
+    * [x] Finish activity when navigating away, not available in backstack
    
-* Sports
-   * [x] User can select sports
-   * [x] Sports UI
+* Stream - Sports
+    * [x] Allow user to select from a range of provided sports
+    * [x] Display text (sports names) and media (sports icons)
 
-* Games / Scores
-   * [x] User can view games and scores for the selected sport
-   * [x] Games / Scores UI
+* Detail - Games / Scores
+    * [x] Send network requests to retrieve games and scores for the selected sport
+    * [x] Organize and display text (names, scores) and media (flags, logos) from source data
 
-* Social
-    * [x] User can post their reaction of a game
-    * [x] User can view reactions posted by other users
-    * [x] Social UI
+* Stream - Social
+    * [x] Send request to Parse server to retrieve reactions posted by any user, including 'created at' datetime and profile photos
+    * [x] Display 'created at' datetime in relative format
+    * [x] Display user profile photos in fixed size
+    * [x] Use search bar to request filtered results
+    * [x] Send request to Parse server to retrieve a filtered list of reactions
 
+* Creation - Social
+    * [x] Accept user input to post new reaction
+    * [x] Validate text field for completeness before creation
+    * [x] Send request to Parse server to create new item and attribute to logged in user
+    * [x] Display new reaction on Social stream in real-time without need for refresh 
+    
 * Profile
-   * [x] User can logout from the app
-   * [x] User can update their profile information
-   * [x] User can use the smartphone camera to add a profile image
-   * [x] Profile UI
+    * [x] Send request to Parse server to retrieve profile information and image for logged in user
+    * [x] Use smartphone camera to modify profile photo
+    * [x] Use text field input to modify profile information
+    * [x] Send network request to save updated profile information for logged in user
+    * [x] Allow user to sign out of account
 
 ### 3. Navigation
 
@@ -93,22 +102,12 @@ An Android mobile app—browse sports, view scoring updates for domestic and int
 
 **Flow Navigation** (Screen to Screen)
 
-* Login
-  * Sports
-* Login
-  * Sign up
-* Sign up
-  * Login
-* Sign up
-  * Sports 
-* Sports
-  * Games
-* Games
-  * Sports
-* Games
-  * Scores
-* Scores
-  * Games
+* Login --> Sports
+* Login --> Sign up
+* Sign up --> Login
+* Sign up --> Sports 
+* Sports --> Games/Scores
+* Games/Scores --> Sports
 
 ## Wireframes
 
