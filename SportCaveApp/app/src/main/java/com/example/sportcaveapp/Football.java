@@ -39,18 +39,14 @@ public class Football extends AppCompatActivity {
         RecyclerView Rec = findViewById(R.id.rv);
         matches = new ArrayList<>();
 
-
-       MatchAdapter matchAdapter =  new MatchAdapter(this,matches);
-       Log.i(TAG,matchAdapter.toString());
-       Rec.setAdapter(matchAdapter);
-       Rec.setLayoutManager(new LinearLayoutManager(this));
-
+        MatchAdapter matchAdapter =  new MatchAdapter(this,matches);
+        Log.i(TAG,matchAdapter.toString());
+        Rec.setAdapter(matchAdapter);
+        Rec.setLayoutManager(new LinearLayoutManager(this));
 
         AsyncHttpClient client = new AsyncHttpClient();
         RequestParams params = new RequestParams();
         RequestHeaders requestHeaders = new RequestHeaders();
-
-
 
         requestHeaders.put("x-rapidapi-key", "dd27d337f8178a55f9009641fd988ee0");
 
@@ -59,12 +55,9 @@ public class Football extends AppCompatActivity {
             @Override
             public void onSuccess(int i, Headers headers, JSON json) {
                 Log.d(TAG,"Good to go");
-               // Toast.makeText(Football.this,"Success!", Toast.LENGTH_SHORT).show();
                 JSONObject jsonObject = json.jsonObject;
 
                 try {
-
-
                     JSONArray results = jsonObject.getJSONArray("response");
 
                     //Storing the information in arraylists
@@ -79,12 +72,8 @@ public class Football extends AppCompatActivity {
                         // Saving the objects as type Match
                         Match m = new Match(teams_home,teams_away,gaols_obj);
                         matches.add(m);
-
-
                     }
                     matchAdapter.notifyDataSetChanged();
-
-
 
                     Log.i(TAG,"Results " + results.length());
                     Log.i(TAG,"Results " + results.toString());
@@ -94,14 +83,11 @@ public class Football extends AppCompatActivity {
                     Log.e(TAG,"Json issue");
                     e.printStackTrace();
                 }
-
-
             }
 
             @Override
             public void onFailure(int i, Headers headers, String s, Throwable throwable) {
                 Log.d(TAG,"Not good at all");
-                Toast.makeText(Football.this,"Bad!", Toast.LENGTH_SHORT).show();
             }
         });
 

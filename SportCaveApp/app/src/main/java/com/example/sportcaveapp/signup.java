@@ -83,10 +83,9 @@ public class signup extends AppCompatActivity {
                             goMainActivity();
 
                         } else {
-                            // Sign up didn't succeed. Look at the ParseException
-                            // to figure out what went wrong
+                            // Sign up didn't succeed. Look at the ParseException to figure out what went wrong
                             e.printStackTrace();
-                            //Toast.makeText(getApplicationContext(), "Unable to signup!", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), "Unable to sign up!", Toast.LENGTH_SHORT).show();
                         }
                     }
 
@@ -98,6 +97,8 @@ public class signup extends AppCompatActivity {
     private void goMainActivity() {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
+        // finish login activity after navigating away, unavailable in backstack
+        finish();
     }
 }
 

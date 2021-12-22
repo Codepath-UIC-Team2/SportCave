@@ -40,6 +40,7 @@ public class Basketball extends AppCompatActivity {
 
     public static final String TAG = "Basketball";
     private BottomNavigationView bottomNavigationView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,12 +64,9 @@ public class Basketball extends AppCompatActivity {
             @Override
             public void onSuccess(int i, Headers headers, JSON json) {
                 Log.d(TAG,"Good to go");
-                //Toast.makeText(Basketball.this,"Success!", Toast.LENGTH_SHORT).show();
                 JSONObject jsonObject = json.jsonObject;
 
                 try {
-
-
                     JSONArray results = jsonObject.getJSONArray("response");
 
                     //Storing the information in arraylists
@@ -86,14 +84,9 @@ public class Basketball extends AppCompatActivity {
                         // Saving the objects as type Match
                         BasketBall_Game m = new BasketBall_Game(teams_home,teams_away,goals_home,goals_away,location);
                         games.add(m);
-
-
                     }
+
                     matchAdapter.notifyDataSetChanged();
-
-
-
-
 
                     Log.i(TAG,"Results " + results.length());
                     Log.i(TAG,"Results " + results.toString());
@@ -103,8 +96,6 @@ public class Basketball extends AppCompatActivity {
                     Log.e(TAG,"Json issue");
                     e.printStackTrace();
                 }
-
-
             }
 
             @Override

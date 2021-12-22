@@ -14,15 +14,13 @@ public class TimeFormatter {
     public static final String TAG = "TimeFormatter";
 
     public static String getTimeDifference(String dbDate) {
-        String time = "as";
-        String dbFormat = "EEE MMM dd hh:mm:ss z yyyy";
+        String time = "";
+        String dbFormat = "EEE MMM dd kk:mm:ss z yyyy";
         SimpleDateFormat format = new SimpleDateFormat(dbFormat, Locale.ENGLISH);
         format.setLenient(true);
         try {
             System.out.println(dbDate);
-            time = "if";
             long diff = (System.currentTimeMillis() - format.parse(dbDate).getTime()) / 1000;
-            time = "now";
             if (diff < 5)
                 time = "Now";
             else if (diff < 60)

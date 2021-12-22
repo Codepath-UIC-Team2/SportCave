@@ -1,7 +1,5 @@
 package com.example.sportcaveapp.fragments;
 
-import android.app.SearchManager;
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -22,7 +20,6 @@ import android.widget.EditText;
 import android.widget.SearchView;
 import android.widget.Toast;
 
-import com.example.sportcaveapp.MainActivity;
 import com.example.sportcaveapp.R;
 import com.example.sportcaveapp.Reaction;
 import com.example.sportcaveapp.ReactionsAdapter;
@@ -37,7 +34,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SocialFragment extends Fragment {
+public class SocialFragment extends Fragment implements MenuItem.OnActionExpandListener {
 
     ParseUser currentUser;
     EditText etCompose;
@@ -100,6 +97,8 @@ public class SocialFragment extends Fragment {
                         etCompose.setText("");
                     }
                 });
+                allReactions.add(0, reaction);
+                adapter.notifyItemInserted(0);
             }
         });
     }
@@ -132,7 +131,46 @@ public class SocialFragment extends Fragment {
 
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        inflater.inflate(R.menu.options_menu, menu);
+        inflater.inflate(R.menu.search_menu, menu);
+        MenuItem searchItem = menu.findItem(R.id.action_search);
+        final androidx.appcompat.widget.SearchView searchView = (androidx.appcompat.widget.SearchView) searchItem.getActionView();
+        searchView.setOnQueryTextListener(new androidx.appcompat.widget.SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return true;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+
+                if (newText == null || newText.trim().isEmpty()) {
+                    adapter = new ReactionsAdapter(getContext(), allReactions);
+                    rvReactions.setAdapter(adapter);
+                    return false;
+                }
+
+                List<Reaction> filteredValues = new ArrayList<Reaction>(allReactions);
+                for (Reaction reaction : allReactions) {
+                    if (!reaction.getComment().toLowerCase().contains(newText.toLowerCase())) {
+                        filteredValues.remove(reaction);
+                    }
+                }
+
+                adapter = new ReactionsAdapter(getContext(), filteredValues);
+                rvReactions.setAdapter(adapter);
+                return false;
+            }
+        });
+    }
+
+    @Override
+    public boolean onMenuItemActionExpand(MenuItem item) {
+        return true;
+    }
+
+    @Override
+    public boolean onMenuItemActionCollapse(MenuItem item) {
+        return true;
     }
 
 }

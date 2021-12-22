@@ -92,7 +92,7 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginTop="0dp"
-        android:backgroundTint="#C32B42"
+        android:backgroundTint="#EF5350"
         android:text="Log out"
         app:icon="@drawable/ic_baseline_login_24"
         app:iconGravity="textStart" />

@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.parse.LogInCallback;
 import com.parse.ParseException;
@@ -31,6 +32,11 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.loginpage);
 
+        // if signed in, don't show login screen on app restart
+        if (ParseUser.getCurrentUser() != null) {
+            goMainActivity();
+        }
+
         titleTV = (TextView) findViewById(R.id.signinTextview);
         username = (EditText) findViewById(R.id.username);
         password = (EditText) findViewById(R.id.password);
@@ -46,8 +52,11 @@ public class LoginActivity extends AppCompatActivity {
             usernameID = username.getText().toString();
             userPassword = password.getText().toString();
 
-            loginUser(usernameID, userPassword);
+            if (usernameID.isEmpty() || userPassword.isEmpty()) {
+                Toast.makeText(getApplicationContext(), "Please fill all fields!", Toast.LENGTH_SHORT).show();
+            }
 
+            loginUser(usernameID, userPassword);
         });
 
     }
@@ -57,19 +66,20 @@ public class LoginActivity extends AppCompatActivity {
         ParseUser.logInInBackground(usernameID, userPassword, new LogInCallback(){
             @Override
             public void done(ParseUser user, ParseException e) {
-
                 if(e != null){
                     System.out.println("error");
+                    Toast.makeText(getApplicationContext(), "Unable to sign in!", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 goMainActivity();
             }
         });
-
     }
 
     private void goMainActivity() {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
+        // finish login activity after navigating away, unavailable in backstack
+        finish();
     }
 }
