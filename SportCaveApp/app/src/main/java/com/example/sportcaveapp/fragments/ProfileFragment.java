@@ -91,7 +91,7 @@ public class ProfileFragment extends Fragment {
         if (currentUser.getParseFile("profilePicture") != null) {
             Glide.with(getContext()).load(currentUser.getParseFile("profilePicture").getUrl()).into(ivProfile); }
         else {
-            Glide.with(getContext()).load(R.drawable.profile).into(ivProfile); }
+            Glide.with(getContext()).load(R.drawable.user).into(ivProfile); }
         etName.setText(currentUser.get("profileName").toString());
         tvUsername.setText("@"+currentUser.getUsername());
         etEmail.setText(currentUser.getEmail());

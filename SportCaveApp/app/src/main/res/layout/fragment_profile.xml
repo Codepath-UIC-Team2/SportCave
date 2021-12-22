@@ -20,7 +20,7 @@
         app:civ_shadow="true"
         app:civ_shadow_color="#959595"
         app:civ_shadow_radius="10dp"
-        tools:srcCompat="@drawable/profile" />
+        tools:srcCompat="@drawable/user" />
 
     <Button
         android:id="@+id/btnImage"

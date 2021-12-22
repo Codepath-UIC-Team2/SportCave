@@ -71,7 +71,7 @@ public class ReactionsAdapter extends RecyclerView.Adapter<ReactionsAdapter.View
             if (reaction.getUser().getParseFile("profilePicture") != null) {
                 Glide.with(context).load(reaction.getUser().getParseFile("profilePicture").getUrl()).into(ivProfileImage); }
             else {
-                Glide.with(context).load(R.drawable.profile).into(ivProfileImage); }
+                Glide.with(context).load(R.drawable.user).into(ivProfileImage); }
         }
     }
 }
