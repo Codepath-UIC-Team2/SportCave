@@ -41,10 +41,11 @@ An Android mobile app—browse sports, view scoring updates for domestic and int
 
 * [x] Create and update actions are changed in real-time
 * [x] User can search reactions in the Social feed
-* [ ] User can post photos to Social feed
-* [ ] User can click a reaction to view the user profile
+* [x] User can post photos to Social feed
+* [x] User can click a username to view the user profile
+* [x] User can update their favorite sports via button (Sports page) or text (Profile page) input
 * [ ] User can pull to refresh for real-time Sports and Social data
-* [ ] User can favorite sports rather than manually entering them in the Profile
+* [ ] User can infinitely scroll the Social stream via Pagination
 * [ ] User can view games and scores for more than two sports
 
 **Stretch Stories**
@@ -134,7 +135,7 @@ URL : https://imgur.com/a/WWjdWS2
    | email          | String   | user account email |
    | profileName    | String   | user profile name |
    | profilePicture | File     | user profile image |
-   | favSports      | String   | user-entered favorite sports |
+   | mySports       | Array    | sports user favorited via button or text input |
    
 #### Reaction
 
@@ -144,6 +145,7 @@ URL : https://imgur.com/a/WWjdWS2
    | user         | Pointer  | pointer to objectId (from User class) of user posting comment |
    | comment      | String   | comment text |
    | createdAt    | DateTime | date/time when post is created |
+   | photoReaction   | File     | optional photo attached to reaction post |
 
 ### Networking
 * Games / Scores Page
