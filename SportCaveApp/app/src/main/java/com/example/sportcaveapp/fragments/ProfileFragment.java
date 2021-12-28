@@ -39,6 +39,7 @@ import com.parse.SaveCallback;
 import org.jetbrains.annotations.NotNull;
 
 import java.io.File;
+import java.util.List;
 
 public class ProfileFragment extends Fragment {
 
@@ -95,15 +96,26 @@ public class ProfileFragment extends Fragment {
         etName.setText(currentUser.get("profileName").toString());
         tvUsername.setText("@"+currentUser.getUsername());
         etEmail.setText(currentUser.getEmail());
-        etMySports.setText(currentUser.get("favSports").toString());
+        etMySports.setText(currentUser.getList("mySports").toString()
+                .replace("[", "").replace("]", ""));
 
         btnUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                currentUser = ParseUser.getCurrentUser();
                 String Name = etName.getText().toString();
                 String Email = etEmail.getText().toString();
+
+                List lstMySports = currentUser.getList("mySports");
+                lstMySports.clear();
+                currentUser.put("mySports", lstMySports);
+                currentUser.saveInBackground();
+
                 String MySports = etMySports.getText().toString();
-                currentUser = ParseUser.getCurrentUser();
+                String[] etMySportsArray = MySports.split(", ");
+                for (String s : etMySportsArray) {
+                    currentUser.add("mySports", s); }
+
                 if (Email.isEmpty() || Name.isEmpty()) {
                     Toast.makeText(getContext(), "Name/email cannot be empty", Toast.LENGTH_SHORT).show();
                     return;
@@ -113,7 +125,7 @@ public class ProfileFragment extends Fragment {
                 }
                 currentUser.put("profileName", Name);
                 currentUser.setEmail(Email);
-                currentUser.put("favSports", MySports);
+
                 currentUser.saveInBackground(new SaveCallback() {
                     @Override
                     public void done(ParseException e) {

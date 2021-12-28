@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -20,8 +21,13 @@ import com.example.sportcaveapp.Football;
 import com.example.sportcaveapp.LoginActivity;
 import com.example.sportcaveapp.MainActivity;
 import com.example.sportcaveapp.R;
+import com.parse.ParseException;
+import com.parse.ParseUser;
+import com.parse.SaveCallback;
 
 import org.jetbrains.annotations.NotNull;
+
+import java.util.List;
 
 public class SportsFragment extends Fragment {
 
@@ -32,6 +38,15 @@ public class SportsFragment extends Fragment {
     ImageView ivSport5;
     ImageView ivSport6;
     int color;
+    ParseUser currentUser;
+    Button favBasketball;
+    Button favF1;
+    Button favSoccer;
+    Button favCricket;
+    Button favFootball;
+    Button favGolf;
+
+    public static final String TAG = "SportsFragment";
 
     public SportsFragment() {
         // Required empty public constructor
@@ -40,6 +55,8 @@ public class SportsFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull @NotNull View view, @Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        currentUser = ParseUser.getCurrentUser();
 
         ivSport1 = view.findViewById(R.id.ivSport1);
         ivSport2 = view.findViewById(R.id.ivSport2);
@@ -68,6 +85,94 @@ public class SportsFragment extends Fragment {
                 gotoBasketball();
             }
         });
+
+        favBasketball = view.findViewById(R.id.favBasketball);
+        favF1 = view.findViewById(R.id.favF1);
+        favSoccer = view.findViewById(R.id.favSoccer);
+        favCricket = view.findViewById(R.id.favCricket);
+        favFootball = view.findViewById(R.id.favFootball);
+        favGolf = view.findViewById(R.id.favGolf);
+
+        favBasketball.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String fav = "Basketball";
+                favSport(fav);
+            }
+        });
+
+        favF1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String fav = "F1";
+                favSport(fav);
+            }
+        });
+
+        favSoccer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String fav = "Soccer";
+                favSport(fav);
+            }
+        });
+
+        favCricket.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String fav = "Cricket";
+                favSport(fav);
+            }
+        });
+
+        favFootball.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String fav = "Football";
+                favSport(fav);
+            }
+        });
+
+        favGolf.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String fav = "Golf";
+                favSport(fav);
+            }
+        });
+
+    }
+
+    private void favSport(String fav) {
+        if (!currentUser.getList("mySports").contains(fav)) {
+            currentUser.add("mySports", fav);
+            currentUser.saveInBackground(new SaveCallback() {
+                @Override
+                public void done(ParseException e) {
+                    if (e != null) {
+                        Log.e(TAG, "Error while adding to favorite sports!", e);
+                        Toast.makeText(getContext(), "Error while adding to favorite sports!", Toast.LENGTH_SHORT).show();
+                    }
+                    Log.i(TAG, "Added to favorite sports!");
+                    Toast.makeText(getContext(), "Added to favorite sports!", Toast.LENGTH_SHORT).show();
+                }
+            });
+        } else {
+            List lstMySports = currentUser.getList("mySports");
+            lstMySports.remove(fav);
+            currentUser.put("mySports", lstMySports);
+            currentUser.saveInBackground(new SaveCallback() {
+                @Override
+                public void done(ParseException e) {
+                    if (e != null) {
+                        Log.e(TAG, "Error while removing from favorite sports!", e);
+                        Toast.makeText(getContext(), "Error while removing from favorite sports!", Toast.LENGTH_SHORT).show();
+                    }
+                    Log.i(TAG, "Removed from favorite sports!");
+                    Toast.makeText(getContext(), "Removed from favorite sports!", Toast.LENGTH_SHORT).show();
+                }
+            });
+        }
     }
 
     @Override
