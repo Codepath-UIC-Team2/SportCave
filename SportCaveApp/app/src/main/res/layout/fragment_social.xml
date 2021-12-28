@@ -15,6 +15,20 @@
         android:orientation="horizontal"
         android:layout_width="fill_parent">
 
+        <Button
+            android:id="@+id/btnGallery"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="#FFFFFF"
+            app:icon="@android:drawable/ic_menu_gallery"
+            app:iconGravity="textEnd"
+            app:iconTintMode="multiply"
+            android:layout_marginRight="-5dp"
+            android:paddingLeft="1dp" >
+        </Button>
+
         <EditText
             android:id="@+id/etCompose"
             android:layout_height="wrap_content"
@@ -36,6 +50,18 @@
         </Button>
 
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvAttachment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-5dp"
+        android:layout_marginBottom="5dp"
+        android:paddingStart="40dp"
+        android:text="No photo attachment"
+        android:textColor="@color/purple_500"
+        android:textSize="15dp"
+        android:textStyle="italic" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvReactions"
