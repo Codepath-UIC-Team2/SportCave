@@ -9,7 +9,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Match {
+public class Soccer_Game {
     String team1;
     String team2;
     String logo1;
@@ -17,7 +17,7 @@ public class Match {
     String goals1;
     String goals2;
    // String match_location;
-    public Match(JSONObject jsonObject_home,JSONObject jsonObject_away , JSONObject jsonObject_goals) throws JSONException {
+    public Soccer_Game(JSONObject jsonObject_home, JSONObject jsonObject_away , JSONObject jsonObject_goals) throws JSONException {
         team1 = jsonObject_home.getString("name");
         logo1 = jsonObject_home.getString("logo");
         team2 = jsonObject_away.getString("name");

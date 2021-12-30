@@ -1,41 +1,25 @@
 package com.example.sportcaveapp;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
 import android.os.Bundle;
-import android.util.Log;
-import android.view.MenuItem;
-import android.widget.ImageView;
-import android.widget.Toast;
 
-import com.codepath.asynchttpclient.AsyncHttpClient;
-import com.codepath.asynchttpclient.RequestHeaders;
-import com.codepath.asynchttpclient.RequestParams;
-import com.codepath.asynchttpclient.callback.JsonHttpResponseHandler;
 import com.example.sportcaveapp.fragments.ProfileFragment;
 import com.example.sportcaveapp.fragments.SocialFragment;
 import com.example.sportcaveapp.fragments.SportsFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-import org.jetbrains.annotations.NotNull;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.util.ArrayList;
 import java.util.List;
 
-import models.Match;
-import okhttp3.Headers;
+import models.Soccer_Game;
 
 public class MainActivity extends AppCompatActivity {
 
     public static final String TAG = "MainActivity";
     private BottomNavigationView bottomNavigationView;
-    List <Match> matches;
+    List <Soccer_Game> soccerGames;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
