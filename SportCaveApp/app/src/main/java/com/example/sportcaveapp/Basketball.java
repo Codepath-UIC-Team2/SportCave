@@ -18,18 +18,14 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
 import Adapters.BasketBallAdapter;
-import Adapters.MatchAdapter;
 import models.BasketBall_Game;
-import models.Match;
 import okhttp3.Headers;
 
 public class Basketball extends AppCompatActivity {
@@ -81,7 +77,7 @@ public class Basketball extends AppCompatActivity {
                         JSONObject info = output.getJSONObject("teams");
                         JSONObject teams_home = info.getJSONObject("home");
                         JSONObject teams_away = info.getJSONObject("away");
-                        // Saving the objects as type Match
+                        // Saving the objects as type Soccer_Game
                         BasketBall_Game m = new BasketBall_Game(teams_home,teams_away,goals_home,goals_away,location);
                         games.add(m);
                     }

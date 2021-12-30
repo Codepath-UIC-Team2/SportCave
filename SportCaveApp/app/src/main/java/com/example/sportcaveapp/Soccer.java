@@ -6,7 +6,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.Toast;
 
 import com.codepath.asynchttpclient.AsyncHttpClient;
 import com.codepath.asynchttpclient.RequestHeaders;
@@ -21,15 +20,15 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-import Adapters.MatchAdapter;
-import models.Match;
+import Adapters.SoccerAdapter;
+import models.Soccer_Game;
 import okhttp3.Headers;
 
-public class Football extends AppCompatActivity {
+public class Soccer extends AppCompatActivity {
     public static final String API_URL= " https://v3.football.api-sports.io/fixtures?live=all";
-    public static final String TAG = "Football";
+    public static final String TAG = "Soccer";
     private BottomNavigationView bottomNavigationView;
-    List<Match> matches;
+    List<Soccer_Game> soccerGames;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,11 +36,11 @@ public class Football extends AppCompatActivity {
         setContentView(R.layout.activity_football);
 
         RecyclerView Rec = findViewById(R.id.rv);
-        matches = new ArrayList<>();
+        soccerGames = new ArrayList<>();
 
-        MatchAdapter matchAdapter =  new MatchAdapter(this,matches);
-        Log.i(TAG,matchAdapter.toString());
-        Rec.setAdapter(matchAdapter);
+        SoccerAdapter soccerAdapter =  new SoccerAdapter(this, soccerGames);
+        Log.i(TAG, soccerAdapter.toString());
+        Rec.setAdapter(soccerAdapter);
         Rec.setLayoutManager(new LinearLayoutManager(this));
 
         AsyncHttpClient client = new AsyncHttpClient();
@@ -69,15 +68,15 @@ public class Football extends AppCompatActivity {
                         JSONObject info = output.getJSONObject("teams");
                         JSONObject teams_home = info.getJSONObject("home");
                         JSONObject teams_away = info.getJSONObject("away");
-                        // Saving the objects as type Match
-                        Match m = new Match(teams_home,teams_away,gaols_obj);
-                        matches.add(m);
+                        // Saving the objects as type Soccer_Game
+                        Soccer_Game m = new Soccer_Game(teams_home,teams_away,gaols_obj);
+                        soccerGames.add(m);
                     }
-                    matchAdapter.notifyDataSetChanged();
+                    soccerAdapter.notifyDataSetChanged();
 
                     Log.i(TAG,"Results " + results.length());
                     Log.i(TAG,"Results " + results.toString());
-                    Log.i(TAG,"Matches all  " + matches.size());
+                    Log.i(TAG,"Matches all  " + soccerGames.size());
 
                 } catch (JSONException e) {
                     Log.e(TAG,"Json issue");

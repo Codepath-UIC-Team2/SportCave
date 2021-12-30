@@ -22,10 +22,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SportCaveApp">
         <activity
+            android:name=".F1"
+            android:exported="true" />
+        <activity
             android:name=".Basketball"
             android:exported="true" />
         <activity
-            android:name=".Football"
+            android:name=".Soccer"
             android:exported="true" />
 
         <provider

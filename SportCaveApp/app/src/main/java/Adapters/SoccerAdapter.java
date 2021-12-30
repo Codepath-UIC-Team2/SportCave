@@ -15,16 +15,16 @@ import com.example.sportcaveapp.R;
 
 import java.util.List;
 
-import models.Match;
+import models.Soccer_Game;
 
-public class MatchAdapter extends RecyclerView.Adapter<MatchAdapter.ViewHolder> {
+public class SoccerAdapter extends RecyclerView.Adapter<SoccerAdapter.ViewHolder> {
 
     Context context;
-    List<Match> matches;
+    List<Soccer_Game> soccerGames;
 
-    public MatchAdapter(Context context, List<Match> matches) {
+    public SoccerAdapter(Context context, List<Soccer_Game> soccerGames) {
         this.context = context;
-        this.matches = matches;
+        this.soccerGames = soccerGames;
     }
 
     @NonNull
@@ -36,15 +36,15 @@ public class MatchAdapter extends RecyclerView.Adapter<MatchAdapter.ViewHolder> 
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
-        Match match = matches.get(i);
+        Soccer_Game soccerGame = soccerGames.get(i);
 
-        viewHolder.bind(match);
+        viewHolder.bind(soccerGame);
 
     }
 
     @Override
     public int getItemCount() {
-        return matches.size();
+        return soccerGames.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
@@ -68,13 +68,13 @@ public class MatchAdapter extends RecyclerView.Adapter<MatchAdapter.ViewHolder> 
 
         }
 
-        public void bind(Match match) {
-            tvname1.setText(match.getTeam1());
-            tvname2.setText(match.getTeam2());
-            tvgoals1.setText(match.getGoals1());
-            tvgoals2.setText(match.getGoals2());
-            Glide.with(context).load(match.getLogo1()).into(ivteam1);
-            Glide.with(context).load(match.getLogo2()).into(ivteam2);
+        public void bind(Soccer_Game soccerGame) {
+            tvname1.setText(soccerGame.getTeam1());
+            tvname2.setText(soccerGame.getTeam2());
+            tvgoals1.setText(soccerGame.getGoals1());
+            tvgoals2.setText(soccerGame.getGoals2());
+            Glide.with(context).load(soccerGame.getLogo1()).into(ivteam1);
+            Glide.with(context).load(soccerGame.getLogo2()).into(ivteam2);
 
         }
     }
